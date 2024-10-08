@@ -1,0 +1,173 @@
+/* * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+.imger {
+  width: 100%;
+  height: auto;
+  max-width: 700px;
+  transition: transform 0.5s;
+}
+
+
+.imger:hover {
+  transform: scale(1.05);
+}
+
+.about {
+  font-size: 4vw;
+  opacity: 0;
+  animation: fadeIn 1.5s ease-in forwards;
+}
+
+.larger {
+  font-size: 1.5vw;
+  opacity: 0;
+  animation: fadeIn 2s ease-in forwards;
+}
+
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+
+@media only screen and (max-width: 1200px) {
+  .about {
+      font-size: 3.5vw;
+  }
+  .larger {
+      font-size: 1.2vw;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .about {
+      font-size: 3vw;
+  }
+  .larger {
+      font-size: 1vw;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .about {
+      font-size: 2.5vw;
+  }
+  .larger {
+      font-size: 1vw;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .about {
+      font-size: 5vw;
+      text-align: center;
+  }
+  .larger {
+      font-size: 2.5vw;
+      text-align: center;
+  }
+}
+body , html
+{
+  overflow-x: hidden;
+} */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Responsive Image */
+.imger {
+  width: 100%;
+  height: auto;
+  max-width: 100%; /* Prevents image from exceeding container */
+  transition: transform 0.5s;
+}
+
+/* Animation for hover */
+.imger:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive Typography */
+.about {
+  font-size: 4vw;
+  opacity: 0;
+  animation: fadeIn 1.5s ease-in forwards;
+}
+
+.larger {
+  font-size: 1.5vw;
+  opacity: 0;
+  animation: fadeIn 2s ease-in forwards;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Media Queries */
+@media only screen and (max-width: 1200px) {
+  .about {
+    font-size: 3.5vw;
+  }
+  .larger {
+    font-size: 1.2vw;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .about {
+    font-size: 3vw;
+  }
+  .larger {
+    font-size: 1vw;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .about {
+    font-size: 2.5vw;
+  }
+  .larger {
+    font-size: 1vw;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .about {
+    font-size: 4vw;
+    text-align: center;
+  }
+  .larger {
+    font-size: 1.8vw;
+    text-align: center;
+  }
+}
+
+/* Prevent horizontal overflow */
+body, html {
+  overflow-x: hidden;
+}
+
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}

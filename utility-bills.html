@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Taxes and Bill Payments</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="icon" href="images/Logo.jpg" />
+    <link rel="stylesheet" href="enhnc.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      /* Animation for fade-in effect */
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .fade-in {
+        animation: fadeIn 2s ease-in-out;
+      }
+
+      /* Hover effect on buttons */
+      .btn-danger:hover {
+        background-color: #ff6347;
+        transition: 0.3s ease;
+      }
+
+      /* Responsive Typography */
+      .about {
+        font-size: 4vw;
+        opacity: 0;
+        animation: fadeIn 1.5s ease-in forwards;
+      }
+      .larger {
+        font-size: 1.5rem;
+        line-height: 1.6;
+        opacity: 0;
+        animation: fadeIn 2s ease-in forwards;
+      }
+
+      /* Media Queries */
+      @media only screen and (max-width: 1200px) {
+        .about {
+          font-size: 3.5rem;
+        }
+        .larger {
+          font-size: 1.25rem;
+        }
+      }
+
+      @media only screen and (max-width: 992px) {
+        .about {
+          font-size: 3rem;
+        }
+        .larger {
+          font-size: 1.1rem;
+        }
+      }
+
+      @media only screen and (max-width: 768px) {
+        .about {
+          font-size: 2.5rem;
+        }
+        .larger {
+          font-size: 1rem;
+        }
+      }
+
+      @media only screen and (max-width: 576px) {
+        .about {
+          font-size: 2rem;
+          text-align: center;
+        }
+        .larger {
+          font-size: 0.95rem;
+          text-align: center;
+        }
+      }
+
+      /* Responsive Image */
+      .imger {
+        width: 100%;
+        height: auto;
+        max-width: 700px;
+        transition: transform 0.5s;
+      }
+      .imger:hover {
+        transform: scale(1.05);
+      }
+
+      @media only screen and (max-width: 768px) {
+        .imger {
+          max-width: 100%;
+        }
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .row {
+        margin-left: 0;
+        margin-right: 0;
+      }
+
+      /* Animation for fade-in effect */
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .fade-in {
+        animation: fadeIn 2s ease-in-out;
+      }
+
+      /* Hover effect on buttons */
+      .btn-danger:hover {
+        background-color: #ff6347;
+        transition: 0.3s ease;
+      }
+
+      /* Responsive Typography */
+      .about {
+        font-size: 4vw;
+        opacity: 0;
+        animation: fadeIn 1.5s ease-in forwards;
+      }
+      .larger {
+        font-size: 1.5rem;
+        line-height: 1.6;
+        opacity: 0;
+        animation: fadeIn 2s ease-in forwards;
+      }
+
+      /* Media Queries */
+      @media only screen and (max-width: 1200px) {
+        .about {
+          font-size: 3.5rem;
+        }
+        .larger {
+          font-size: 1.25rem;
+        }
+      }
+
+      @media only screen and (max-width: 992px) {
+        .about {
+          font-size: 3rem;
+        }
+        .larger {
+          font-size: 1.1rem;
+        }
+      }
+
+      @media only screen and (max-width: 768px) {
+        .about {
+          font-size: 2.5rem;
+        }
+        .larger {
+          font-size: 1rem;
+        }
+      }
+
+      @media only screen and (max-width: 576px) {
+        .about {
+          font-size: 2rem;
+          text-align: center;
+        }
+        .larger {
+          font-size: 0.95rem;
+          text-align: center;
+        }
+      }
+
+      /* Responsive Image */
+      .imger {
+        width: 100%;
+        height: auto;
+        max-width: 700px;
+        transition: transform 0.5s;
+      }
+      .imger:hover {
+        transform: scale(1.05);
+      }
+
+      @media only screen and (max-width: 768px) {
+        .imger {
+          max-width: 100%;
+        }
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .row {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg bg-body-tertiary"
+      style="top: 0; z-index: 10"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand w-25" href="index.html">
+          <img src="images/AHMEDFFF.jpg" alt="Logo" class="img-fluid" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="services.html"
+                >Services</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="faqs.html">FAQs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact Us</a>
+            </li>
+          </ul>
+          <a href="index.html">
+            <button type="button" class="btn btn-danger me-1">
+              Get Started
+            </button>
+          </a>
+          <button type="button" class="btn btn-danger">Learn More</button>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hello fade-in">
+      <div class="container">
+        <div class="row align-items-center">
+          <h1 class="about">Comprehensive Taxes and Bill Payments</h1>
+          <div class="col-lg-6 col-md-8 col-sm-12">
+            <p class="larger">
+              At Ahmed Communication & Franchise System, we offer a full range
+              of tax and bill payment services to simplify your financial
+              management. From vehicle token taxes to utility bills and
+              installment payments, we provide efficient and reliable solutions
+              tailored to your needs.
+            </p>
+            <div class="row mt-5">
+              <div class="col-lg-6 col-md-12 col-sm-12">
+                <h2>Tax Payments</h2>
+                <ul>
+                  <li>
+                    <strong>Vehicle Token Tax:</strong> Pay your car token tax
+                    seamlessly through our services, ensuring compliance with
+                    local regulations.
+                  </li>
+                  <li>
+                    <strong>Arms License Tax:</strong> Manage your arms license
+                    tax payments efficiently, with expert guidance and support.
+                  </li>
+                  <li>
+                    <strong>Educational Fees:</strong> Pay fees for
+                    universities, colleges, and schools, including admissions
+                    and tuition, without hassle.
+                  </li>
+                </ul>
+              </div>
+              <div class="col-lg-6 col-md-12 col-sm-12">
+                <h2>Utility Bills</h2>
+                <ul>
+                  <li>
+                    <strong>Gas Bills:</strong> Pay your gas utility bills
+                    quickly and conveniently through our platform.
+                  </li>
+                  <li>
+                    <strong>Electricity Bills:</strong> Manage your electricity
+                    bills with ease, ensuring timely payments and avoiding
+                    disruptions.
+                  </li>
+                  <li>
+                    <strong>Water Bills:</strong> Handle your water utility
+                    payments smoothly, with our reliable and secure services.
+                  </li>
+                </ul>
+              </div>
+              <div class="col-lg-6 col-md-12 col-sm-12">
+                <h2>Installment Payments</h2>
+                <ul>
+                  <li>
+                    <strong>Bank Installments:</strong> Manage your bank loan
+                    installments effectively, including personal and business
+                    loans.
+                  </li>
+                  <li>
+                    <strong>Loan Payments:</strong> Handle payments for various
+                    loans, including personal loans, mortgages, and car loans.
+                  </li>
+                  <li>
+                    <strong>Installment Companies:</strong> We also facilitate
+                    payments for companies offering installment plans, such as:
+                  </li>
+                  <li>
+                    <strong>Daraz Installments:</strong> Conveniently manage
+                    payments for purchases made on Daraz's installment plans.
+                  </li>
+                  <li>
+                    <strong>HBL Installments:</strong> Efficiently pay for
+                    installment plans offered by Habib Bank Limited (HBL).
+                  </li>
+                  <li>
+                    <strong>UBL Installments:</strong> Handle payments for
+                    installment plans provided by United Bank Limited (UBL).
+                  </li>
+                  <li>
+                    <strong>Kashf Bank Installments:</strong>Simplify your loan
+                    repayment process with Kashf Bank's microfinance services.
+                    Manage your installments efficiently, whether for business
+                    expansion, education, or personal needs.
+                  </li>
+                  <li>
+                    <strong>Kashf Bank Loan Payments:</strong>Ensure timely and
+                    hassle-free payments for your Kashf Bank loans, including
+                    microloans for women entrepreneurs, small business owners,
+                    and personal financial growth.
+                  </li>
+                  <li>
+                    <strong>Microfinance Bank Installments:</strong>Manage your
+                    microfinance bank loan installments effortlessly. Whether
+                    you're a small business owner or need personal financial
+                    support, we help you stay on top of your repayments with
+                    ease.
+                  </li>
+                  <li>
+                    <strong>Microfinance Loan Payments:</strong>Handle your
+                    microfinance loan payments with confidence. We offer support
+                    for various loans designed to empower entrepreneurs,
+                    individuals, and underserved communities in achieving their
+                    financial goals.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-sm-12 col-md-12">
+            <img
+              src="images/taxes-696x463.png"
+              alt="Taxes and Bill Payments"
+              class="imger fade-in"
+              style="border-radius: 30px; margin-bottom: 100px"
+              height="600px"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <br />
+    <br />
+    <hr>
+    <footer class="footer-icons mt-5">
+      <div class="row">
+        <div class="col-lg-4 col-md-6">
+          <img src="images/AHMEDFFF.jpg" class="img-fluid" alt="Footer Logo" />
+        </div>
+        <div class="col-lg-4 col-md-6 mt-5">
+          <ul class="list-inline">
+            <li class="list-inline-item"><a href="about.html">About Us</a></li>
+            <li class="list-inline-item"><a href="services.html">Services</a></li>
+            <li class="list-inline-item"><a href="faqs.html">FAQs</a></li>
+            <li class="list-inline-item"><a href="contct.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6 text-center mt-5">
+          <a href="https://www.facebook.com/profile.php?id=100008950890016&mibextid=ZbWKwL" target="_blank"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+          <a href="https://wa.me/+923008677776" target="_blank"
+            ><i class="fa-brands fa-whatsapp"></i
+          ></a>
+          <a href="https://instagram.com" target="_blank"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a href="https://twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+          <a href="https://threads.net" target="_blank"><i class="fa-brands fa-threads"></i></a>
+        </div>
+        <div class="col-lg-12 text-center mt-4">
+          <p>
+            &copy; 2024 Ahmed Communication & Franchise System. All rights
+            reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Hx9hWJo5JRS72PjES+Zy9Y8jVFV1pWSp5nkFdycL03yO2F3G8j5oUbi4YBeKkB+8"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

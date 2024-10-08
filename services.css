@@ -1,0 +1,158 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    overflow-x: hidden;
+  }
+  
+  /* Navbar */
+  .navbar-brand img {
+    height: 5em;
+    width: auto;
+  }
+  
+  @media (max-width: 768px) {
+    .navbar-brand img {
+      height: 4em;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .navbar-brand img {
+      height: 3em;
+    }
+  }
+  
+  /* Hero Section */
+  .bg-image {
+    background-image: url(images/intom.jpg);
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+  }
+  
+  .streamline {
+    font-size: 3.5rem;
+    font-weight: bold;
+  }
+  
+  @media (max-width: 768px) {
+    .streamline {
+      font-size: 2.5rem;
+    }
+  }
+  
+  /* About Section */
+  .about {
+    font-weight: bold;
+    font-size: 2rem;
+  }
+  
+  .larger {
+    font-size: 1.2rem;
+  }
+  
+  .imger {
+    border-radius: 10%;
+  }
+  
+  .bll {
+    font-weight: bold;
+  }
+  
+  /* Service Section */
+  .service-img {
+    border-radius: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .brdr {
+    border-radius: 50px;
+    width: 150px;
+    height: 45px;
+    color: white;
+    background-color: #dc3545;
+  }
+  
+  /* Footer */
+  .footer-icons .fa {
+    color: #6c757d;
+    font-size: 2rem;
+    margin: 0 10px;
+  }
+  
+  .footer-icons p {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #6c757d;
+  }
+  
+  .list-inline {
+    padding-top: 20px;
+  }
+  
+  .list-inline-item {
+    margin-right: 15px;
+  }
+  
+  /* Animations */
+  .animated-element {
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+  }
+  
+  .animated-element.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .animated-element.delay-1 {
+    animation-delay: 0.5s;
+  }
+  
+  .animated-element.delay-2 {
+    animation-delay: 1s;
+  }
+  
+  .animated-element.delay-3 {
+    animation-delay: 1.5s;
+  }
+  
+  .animated-element.delay-4 {
+    animation-delay: 2s;
+  }
+  
+  .animated-element.delay-5 {
+    animation-delay: 2.5s;
+  }
+  
+  .animated-element.delay-6 {
+    animation-delay: 3s;
+  }
+  
+  .animated-element.delay-7 {
+    animation-delay: 3.5s;
+  }
+  
+  .animated-element.delay-8 {
+    animation-delay: 4s;
+  }
+  
+  .animated-element.delay-9 {
+    animation-delay: 4.5s;
+  }
+  
+  .animated-element.delay-10 {
+    animation-delay: 5s;
+  }
+  

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="icon" href="images/Logo.jpg" />
+    <!-- <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="resaa.css"> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      /* Reset and Box-Sizing */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+
+      /* Animation for fade-in effect */
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .fade-in {
+        animation: fadeIn 2s ease-in-out;
+      }
+
+      /* Hover effect on buttons */
+      .btn-danger:hover {
+        background-color: #ff6347;
+        transition: 0.3s ease;
+      }
+
+      /* Responsive Typography */
+      .about {
+        font-size: 4vw; /* Large screen size */
+        opacity: 0;
+        animation: fadeIn 1.5s ease-in forwards;
+      }
+
+      .larger {
+        font-size: 1.5rem; /* Use rem for more consistent sizing */
+        line-height: 1.6;
+        opacity: 0;
+        animation: fadeIn 2s ease-in forwards;
+      }
+
+      /* Media Queries for Responsive Typography */
+      @media only screen and (max-width: 1200px) {
+        .about {
+          font-size: 3.5rem; /* More readable fixed size for mid-sized screens */
+        }
+        .larger {
+          font-size: 1.25rem;
+        }
+      }
+
+      @media only screen and (max-width: 992px) {
+        .about {
+          font-size: 3rem; /* Slightly reduce the font size */
+        }
+        .larger {
+          font-size: 1.1rem;
+        }
+      }
+
+      @media only screen and (max-width: 768px) {
+        .about {
+          font-size: 2.5rem; /* Ensure readability on smaller tablets */
+        }
+        .larger {
+          font-size: 1rem;
+        }
+      }
+
+      @media only screen and (max-width: 576px) {
+        .about {
+          font-size: 2.2rem; /* Increased text size for readability on mobile */
+          text-align: center;
+        }
+        .larger {
+          font-size: 1.1rem;
+          text-align: center;
+        }
+        /* Responsive Team Images */
+        .team-image {
+          width: 100%;
+          height: auto;
+          max-width: 500px; /* Limit the maximum size */
+          border-radius: 30px; /* Optional: keeps the rounded corners */
+          transition: transform 0.5s;
+        }
+
+        .team-image:hover {
+          transform: scale(1.05);
+        }
+
+        @media only screen and (max-width: 768px) {
+          .team-image {
+            max-width: 100%; /* Allow full width on smaller screens */
+          }
+        }
+      }
+
+      /* Responsive Image */
+      .imger {
+        width: 100%; /* Make the image take full width of its container */
+        height: auto; /* Maintain aspect ratio */
+        max-width: 100%; /* Prevents image from exceeding container */
+        transition: transform 0.5s;
+        border-radius: 30px; /* Consistent border radius */
+      }
+
+      .imger:hover {
+        transform: scale(1.05); /* Hover effect */
+      }
+
+      /* Prevent horizontal overflow (Removed as per your request)
+body, html {
+  overflow-x: hidden;
+}
+*/
+
+      /* Layout Adjustments */
+      .row {
+        margin-left: 0;
+        margin-right: 0;
+      }
+
+      /* Container Padding for Better Readability on Mobile */
+      .container {
+        padding: 0 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg bg-body-tertiary"
+      style="top: 0; z-index: 10"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand w-25" href="index.html">
+          <img src="images/AHMEDFFF.jpg" alt="Logo" class="img-fluid" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="about.html"
+                target="_blank"
+                >About Us</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="faqs.html">FAQs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact Us</a>
+            </li>
+          </ul>
+          <a href="index.html">
+            <button type="button" class="btn btn-danger me-1">
+              Get Started
+            </button></a
+          >
+          <button type="button" class="btn btn-danger">Learn More</button>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hello fade-in">
+      <div class="container">
+        <div class="row align-items-center">
+          <h1 class="about">Discover Our<br />Journey</h1>
+          <div class="col-lg-6 col-md-8 col-sm-12">
+            <p class="larger">
+              Founded in 2000, Ahmed Communication & Franchise System has
+              quickly become a leader in financial solutions. Our mission is to
+              empower clients with reliable services that enhance their lives,
+              ensuring a seamless experience for all.
+            </p>
+            <div class="row mt-5">
+              <div class="col-lg-6 col-md-12 col-sm-12">
+                <h2>5000 Clients Served</h2>
+                <p>
+                  We pride ourselves on our customer focus and integrity,
+                  ensuring that every interaction is transparent and beneficial.
+                  Our innovative approach allows us to adapt to the evolving
+                  financial landscape.
+                </p>
+              </div>
+              <div class="col-lg-6 col-md-12 col-sm-12">
+                <h2>2.2 Million+ transactions processed</h2>
+                <p>
+                  With a focus on customer satisfaction, we strive to enhance
+                  the experience of every individual who walks through our
+                  doors.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-sm-12 col-md-12">
+            <img
+              src="images/int.jpg"
+              alt="Our Journey"
+              class="imger fade-in"
+              style="border-radius: 30px"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <br />
+    <br />
+    <div class="container">
+      <h1>Meet Our Team</h1>
+      <p>
+        Dedicated professionals committed to providing exceptional service and
+        support.
+      </p>
+      <br />
+      <div class="row">
+        <div class="col-lg-6 col-sm-12 col-md-8">
+          <img
+            src="images/Ashfaq Hussain.PNG"
+            width="500px"
+            height="400px"
+            class="team-image"
+            style="border-radius: 30px"
+          />
+          <br />
+          <h1>Ashfaq Hussain</h1>
+          <h3>Founder/Owner</h3>
+          <p>
+            With over 15 years of experience in the financial sector, Ashfaq
+            leads the company with a focus on new ideas and customer
+            satisfaction. He manages large amounts of cash, making sure
+            everything is accurate and secure. His leadership has helped the
+            company grow and maintain its reputation for trust and reliability.
+            Ashfaq's forward-thinking approach continues to push the company
+            toward better services and new opportunities.
+          </p>
+        </div>
+        <div class="col-lg-6 col-md-8 col-sm-12">
+          <img
+            src="images/Mubbasher.PNG"
+            width="500px"
+            height="400px"
+            class="team-image"
+            style="border-radius: 30px"
+          />
+          <h1>Mubbashir Hussain</h1>
+          <h3>Front Desk Manager</h3>
+          <p>
+            Mubasher Hussain is the Front Desk Manager, handling customer
+            interactions, transactions, and service inquiries at the main
+            counter. He ensures smooth operations by managing payments,
+            addressing customer needs, and coordinating with other staff. As the
+            owner's brother, he focuses on front-desk tasks, while the owner
+            manages overall business operations. Mubasher's role is key to
+            delivering excellent customer service and efficient daily
+            operations.
+          </p>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <footer class="footer-icons mt-5">
+      <div class="row">
+        <div class="col-lg-4 col-md-6">
+          <img src="images/AHMEDFFF.jpg" class="img-fluid" alt="Footer Logo" />
+        </div>
+        <div class="col-lg-4 col-md-6 mt-5">
+          <ul class="list-inline">
+            <li class="list-inline-item"><a href="about.html">About Us</a></li>
+            <li class="list-inline-item">
+              <a href="services.html">Services</a>
+            </li>
+            <li class="list-inline-item"><a href="faqs.html">FAQs</a></li>
+            <li class="list-inline-item"><a href="contct.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6 text-center mt-5">
+          <a
+            href="https://www.facebook.com/profile.php?id=100008950890016&mibextid=ZbWKwL"
+            target="_blank"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+          <a href="https://wa.me/+923008677776" target="_blank"
+            ><i class="fa-brands fa-whatsapp"></i
+          ></a>
+          <a href="https://instagram.com" target="_blank"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a href="https://twitter.com" target="_blank"
+            ><i class="fa-brands fa-twitter"></i
+          ></a>
+          <a href="https://threads.net" target="_blank"
+            ><i class="fa-brands fa-threads"></i
+          ></a>
+        </div>
+        <div class="col-lg-12 text-center mt-4">
+          <p>
+            &copy; 2024 Ahmed Communication & Franchise System. All rights
+            reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/all.min.js"
+      integrity="sha512-6sSYJqDreZRZGkJ3b+YfdhB3MzmuP9R7X1QZ6g5aIXhRvR1Y/N/P47jmnkENm7YL3oqsmI6AK+V6AD99uWDnIw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
